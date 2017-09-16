@@ -25,15 +25,16 @@
                 <h3>Opšta</h3>
                 <ul class="nav side-menu">
                     <li><a href="<c:url value='/backend/pocetna' />"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="<c:url value='/backend/obavestenja/stara-obavestenja' />"><i class="fa fa-desktop"></i> Stara Obavestenja</a></li>
-                    <li><a><i class="fa fa-edit"></i> Studenti <span class="fa fa-chevron-down"></span></a>
+                    <li><a href="<c:url value='/backend/obavestenja/stara-obavestenja' />"><i class="fa fa-file-excel-o"></i> Stara Obavestenja</a></li>
+                    <li><a><i class="fa fa-wheelchair"></i> Studenti <span class="fa fa-chevron-down"></span></a>
+                    <%--<li><a><i class="fa fa-mortar-board"></i> Studenti <span class="fa fa-chevron-down"></span></a>--%>
                         <ul class="nav child_menu">
                             <li><a href="<c:url value='/backend/studenti/' />">Svi Studenti</a></li>
                             <li><a href="<c:url value='/backend/studenti/aktivni' />">Moji Studenti</a></li>
                             <li><a href="<c:url value='/backend/studenti/dodaj' />">Dodaj Studenta</a></li>
                         </ul>
                     </li>
-                    <li><a><i class="fa fa-desktop"></i> Predmeti <span
+                    <li><a><i class="fa fa-book"></i> Predmeti <span
                             class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<c:url value='/backend/predmet/' />">Svi Predmeti</a></li>
@@ -41,10 +42,10 @@
                             <li><a href="<c:url value='/backend/predmet/dodaj' />">Dodaj Predmet</a></li>
                         </ul>
                     </li>
-                    <li><a><i class="fa fa-table"></i> Zaposleni <span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-users"></i> Zaposleni <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="tables.html">Svi Zaposleni</a></li>
-                            <li><a href="tables_dynamic.html">Moj Profil</a></li>
+                            <li><a href="<c:url value='/backend/svi-zaposleni' />">Svi Zaposleni</a></li>
+                            <li><a href="<c:url value='/backend/moj-profil' />">Moj Profil</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-bar-chart-o"></i> Školska godina <span
@@ -52,13 +53,13 @@
                         <ul class="nav child_menu">
                             <li><a>Po godinama<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="#level2_1">Trenutna godina</a>
+                                    <li><a href="<c:url value='/backend/skolska-godina/trenutna' />">Trenutna godina</a>
                                     </li>
-                                    <li><a href="#level2_2">Prošla godina</a>
+                                    <li><a href="<c:url value='/backend/skolska-godina/prosla' />">Prošla godina</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="morisjs.html">Podešavanja</a></li>
+                            <li><a href="<c:url value='/backend/skolska-godina/podesavanja' />">Podešavanja</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -66,7 +67,7 @@
             <div class="menu_section">
                 <h3>Administracija</h3>
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-bug"></i> Završni radovi <span
+                    <li><a><i class="fa fa-files-o"></i> Završni radovi <span
                             class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<c:url value='/backend/zavrsni-rad/' />">Svi radovi</a></li>
@@ -74,9 +75,9 @@
                             <li><a href="<c:url value='/backend/zavrsni-rad/posmtrani-radovi' />">Posmatrani Radovi</a></li>
                         </ul>
                     </li>
-                    <li><a href="<c:url value='/backend/administracija' />"><i class="fa fa-windows"></i> Administracija </a></li>
-                    <li><a href="<c:url value='/backend/obaveze' />"><i class="fa fa-sitemap"></i> Obaveze </a></li>
-                    <li><a href="<c:url value='/logout' />"><i class="fa fa-windows"></i> Kraj Rada </a></li>
+                    <li><a href="<c:url value='/backend/administracija' />"><i class="fa fa-gears"></i> Administracija </a></li>
+                    <li><a href="<c:url value='/backend/obaveze' />"><i class="fa fa-institution"></i> Obaveze </a></li>
+                    <li><a href="<c:url value='/logout' />"><i class="fa fa-power-off"></i> Kraj Rada </a></li>
                 </ul>
             </div>
 
@@ -91,7 +92,7 @@
             <a data-toggle="tooltip" data-placement="top" title="FullScreen">
                 <span class="glyphicon glyphicon-fullscreen"></span>
             </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
+            <a data-toggle="tooltip" data-placement="top" title="moj profil" href="<c:url value='/backend/moj-profil' />">
                 <span class="glyphicon glyphicon-eye-close"></span>
             </a>
             <a data-toggle="tooltip" data-placement="top" title="Izloguj se" href="<c:url value='/logout' />">

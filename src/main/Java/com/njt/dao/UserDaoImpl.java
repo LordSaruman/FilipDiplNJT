@@ -12,29 +12,11 @@ import java.util.List;
 public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao {
 
     @Override
-    public User findById(int id) {
-        return getByKey(id);
-    }
-
-    @Override
-    public void saveUser(User user) {
-        persist(user);
-    }
-
-    @Override
     @SuppressWarnings("deprecation")
     public void deleteUserById(int id) {
         Query query = getSession().createSQLQuery("DELETE from korisnik where id = :user_id");
         query.setInteger("user_id", id);
         query.executeUpdate();
-    }
-
-    @Override
-    @SuppressWarnings("unchecked")
-    public List<User> findAllUsers() {
-        Criteria criteria = createEntityCriteria();
-
-        return (List<User>) criteria.list();
     }
 
     @Override

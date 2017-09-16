@@ -6,15 +6,15 @@ import java.util.List;
 
 public interface UserDao {
 
-    User findById(int id);
+    User findById(Integer id);
 
-    void saveUser(User user);
+    void persist(User user);
 
     void update(User user);
 
     void deleteUserById(int id);
 
-    List<User> findAllUsers();
+    List<User> findAll();
 
     User findUserByName(String name);
 }

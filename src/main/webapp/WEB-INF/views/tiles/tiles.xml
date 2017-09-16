@@ -17,7 +17,6 @@
 
     <!-- Login page -->
     <definition name="login-page" template="/WEB-INF/views/pages/login.jsp">
-        <put-attribute name="header" value="/WEB-INF/views/tiles/templates/default-header.jsp"/>
     </definition>
 
     <!--Home page-->
@@ -38,34 +37,59 @@
 
     <!--Student-->
     <definition name="all-students-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/student/all-students.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/student/all-students.jsp"/>
     </definition>
     <definition name="all-active-students-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/student/all-active-students.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/student/all-active-students.jsp"/>
     </definition>
     <definition name="add-new-student-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/student/add-new-student.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/student/add-new-student.jsp"/>
     </definition>
 
     <!--Subject-->
-    <definition name="all-subject-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/subject/all-subject.jsp"/>
+    <definition name="all-subjects-page" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/pages/subject/all-subject.jsp"/>
     </definition>
     <definition name="all-my-subjects-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/subject/all-my-subjects.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/subject/all-my-subjects.jsp"/>
     </definition>
     <definition name="add-new-subject-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/subject/add-new-subject.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/subject/add-new-subject.jsp"/>
     </definition>
     <!--Graduate work-->
     <definition name="all-graduate-work-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/graduate-work/all-graduate-work.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/graduate-work/all-graduate-work.jsp"/>
     </definition>
     <definition name="all-active-graduate-work-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/graduate-work/all-active-graduate-work.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/graduate-work/all-active-graduate-work.jsp"/>
     </definition>
     <definition name="all-my-graduate-work-page" extends="base-definition">
-        <put-attribute name="header" value="/WEB-INF/views/pages/graduate-work/all-my-graduate-work.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/graduate-work/all-my-graduate-work.jsp"/>
+    </definition>
+
+    <!--School Year-->
+    <definition name="current-school-year-page" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/pages/school-year/current-school-year.jsp"/>
+    </definition>
+    <definition name="previous-school-year-page" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/pages/school-year/previous-school-year.jsp"/>
+    </definition>
+    <definition name="school-year-settings-page" extends="base-definition">
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/school-year/school-year-settings.style.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/school-year/school-year-settings.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/school-year/school-year-settings.script.jsp"/>
+    </definition>
+
+    <!--Employees-->
+    <definition name="all-employees-page" extends="base-definition">
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/user/all-employees.style.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/all-employees.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/user/all-employees.scripts.jsp"/>
+    </definition>
+    <definition name="my-profile-page" extends="base-definition">
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/user/my-profile.style.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/my-profile.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/user/my-profile.script.jsp"/>
     </definition>
 
 </tiles-definitions>

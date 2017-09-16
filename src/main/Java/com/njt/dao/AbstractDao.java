@@ -1,5 +1,6 @@
 package com.njt.dao;
 
+import com.njt.model.User;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
+import java.util.List;
 
 public abstract class AbstractDao<PK extends Serializable, T> {
     private final Class<T> persistentClass;
@@ -26,6 +28,17 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 
     public T getByKey(PK key) {
         return (T) getSession().get(persistentClass, key);
+    }
+
+    public T findById(PK id) {
+        return getByKey(id);
+    }
+
+    @SuppressWarnings("unchecked")
+    public List<T> findAll(){
+        Criteria criteria = createEntityCriteria();
+
+        return (List<T>) criteria.list();
     }
 
     public void persist(T entity) {

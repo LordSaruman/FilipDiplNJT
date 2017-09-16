@@ -30,7 +30,7 @@ public class SecurityController {
     @Autowired
     PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServices;
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
     public String loginPage() {
         if (isCurrentAuthenticationAnonymous()) {
             return "login-page";

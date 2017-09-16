@@ -187,9 +187,11 @@ $(document).ready(function() {
 // /Tooltip
 
 // Progressbar
-if ($(".progress .progress-bar")[0]) {
-    $('.progress .progress-bar').progressbar();
-}
+$(document).ready(function(){
+    if ($(".progress .progress-bar")[0]) {
+        $('.progress .progress-bar').progressbar();
+    }
+});
 // /Progressbar
 
 // Switchery
@@ -265,7 +267,7 @@ function countChecked() {
     if (checkCount) {
         $('.column-title').hide();
         $('.bulk-actions').show();
-        $('.action-cnt').html(checkCount + ' Records Selected');
+        $('.action-cnt').html(checkCount + ' Elementa Izabrano');
     } else {
         $('.column-title').show();
         $('.bulk-actions').hide();
@@ -2554,9 +2556,7 @@ if (typeof NProgress != 'undefined') {
 
 				$('#datatable').dataTable();
 
-				$('#datatable-keytable').DataTable({
-				  keys: true
-				});
+				$('#datatable-2').DataTable();
 
 				$('#datatable-responsive').DataTable();
 

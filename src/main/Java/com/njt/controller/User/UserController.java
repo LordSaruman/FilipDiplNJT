@@ -17,4 +17,15 @@ public class UserController {
     public String administrationAction(ModelMap modelMap) {
         return "administration-page";
     }
+
+    @RequestMapping(value = "/svi-zaposleni")
+    public String allEmployeesAction(ModelMap modelMap) {
+        return "all-employees-page";
+    }
+
+    @RequestMapping(value = "/moj-profil")
+    public String myProfileAction(ModelMap modelMap) {
+        return "my-profile-page";
+    }
+
 }
