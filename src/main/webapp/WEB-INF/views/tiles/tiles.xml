@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Base Definition -->
+    <definition name="base-definition" template="/WEB-INF/views/tiles/layouts/default-layout.jsp">
+        <put-attribute name="head-scripts-styles" value="/WEB-INF/views/tiles/templates/head-scripts-styles.jsp"/>
+        <put-attribute name="custom-head-scripts-styles" value=""/>
+        <put-attribute name="header" value="/WEB-INF/views/tiles/templates/default-header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/default-menu.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/templates/default-footer.jsp"/>
+        <put-attribute name="custom-scripts" value=""/>
+    </definition>
+
+    <!-- Login page -->
+    <definition name="login-page" template="/WEB-INF/views/pages/login.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/tiles/templates/default-header.jsp"/>
+    </definition>
+
+    <!--Home page-->
+    <definition name="home-page" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/pages/home.jsp"/>
+    </definition>
+    <definition name="old-notifications-page" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/pages/old-notifications.jsp"/>
+    </definition>
+
+    <!--User-->
+    <definition name="all-my-duties-page" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/all-my-duties.jsp"/>
+    </definition>
+    <definition name="administration-page" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/pages/user/administration.jsp"/>
+    </definition>
+
+    <!--Student-->
+    <definition name="all-students-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/student/all-students.jsp"/>
+    </definition>
+    <definition name="all-active-students-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/student/all-active-students.jsp"/>
+    </definition>
+    <definition name="add-new-student-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/student/add-new-student.jsp"/>
+    </definition>
+
+    <!--Subject-->
+    <definition name="all-subject-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/subject/all-subject.jsp"/>
+    </definition>
+    <definition name="all-my-subjects-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/subject/all-my-subjects.jsp"/>
+    </definition>
+    <definition name="add-new-subject-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/subject/add-new-subject.jsp"/>
+    </definition>
+    <!--Graduate work-->
+    <definition name="all-graduate-work-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/graduate-work/all-graduate-work.jsp"/>
+    </definition>
+    <definition name="all-active-graduate-work-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/graduate-work/all-active-graduate-work.jsp"/>
+    </definition>
+    <definition name="all-my-graduate-work-page" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/pages/graduate-work/all-my-graduate-work.jsp"/>
+    </definition>
+
+</tiles-definitions>
