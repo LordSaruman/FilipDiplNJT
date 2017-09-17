@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service("schoolYearService")
 @Transactional
-public class SchoolYearServiceImpl implements  SchoolYearService{
+public class SchoolYearServiceImpl implements SchoolYearService {
 
     @Autowired
     private SchoolYearDao dao;
@@ -23,26 +23,25 @@ public class SchoolYearServiceImpl implements  SchoolYearService{
 
     @Override
     public List<SchoolYear> findAllSchoolYear() {
-        //dao.findAllSchoolYear();
-        return null;
+        return dao.findAll();
     }
 
     @Override
     public void saveSchoolYear(SchoolYear schoolYear) {
-        //dao.saveSchoolYear(schoolYear);
+        dao.persist(schoolYear);
     }
 
     @Override
-    public void updateSchoolYear(SchoolYear dbSchoolYeare, SchoolYear schoolYear) {
-        dbSchoolYeare.setActiveSchoolYear(schoolYear.getActiveSchoolYear());
-        dbSchoolYeare.setSchoolYear(schoolYear.getSchoolYear());
+    public void updateSchoolYear(SchoolYear dbSchoolYear, SchoolYear schoolYear) {
+        dbSchoolYear.setActiveSchoolYear(schoolYear.getActiveSchoolYear());
+        dbSchoolYear.setSchoolYear(schoolYear.getSchoolYear());
 
-        dao.update(dbSchoolYeare);
+        dao.update(dbSchoolYear);
     }
 
     @Override
     public void deleteSchoolYearById(int id) {
-        dao.deleteScholYearById(id);
+        dao.deleteSchoolYearById(id);
     }
 
 }

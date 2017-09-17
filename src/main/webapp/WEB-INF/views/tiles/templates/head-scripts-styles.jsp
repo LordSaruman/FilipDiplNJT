@@ -9,3 +9,8 @@
 <link href="<c:url value='/resources/vendor/nprogress/nprogress.css' />" rel="stylesheet">
 <!-- Custom styling plus plugins -->
 <link href="<c:url value='/resources/css/custom.min.css' />" rel="stylesheet">
+
+<%--Notify--%>
+<link rel="stylesheet" href="<c:url value='/resources/vendor/pnotify/dist/pnotify.css' />">
+<link rel="stylesheet" href="<c:url value='/resources/vendor/pnotify/dist/pnotify.buttons.css' />">
+<link rel="stylesheet" href="<c:url value='/resources/vendor/pnotify/dist/pnotify.nonblock.css' />">

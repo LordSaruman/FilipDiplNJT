@@ -30,7 +30,7 @@ public class SubjectRestController {
         }
         subjectService.updateSubject(subjectDB, subject);
 
-        return new ResponseEntity<>(subject, HttpStatus.CREATED);
+        return new ResponseEntity<>(subject, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/predmet/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)

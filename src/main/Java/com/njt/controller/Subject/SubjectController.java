@@ -32,6 +32,7 @@ public class SubjectController {
     @RequestMapping(value = "/predmet/svi")
     public String allSubjectsFound(ModelMap modelMap){
         modelMap.addAttribute("allSubjects", subjectService.findAllSubjects());
+
         return "all-subjects-found";
     }
 }

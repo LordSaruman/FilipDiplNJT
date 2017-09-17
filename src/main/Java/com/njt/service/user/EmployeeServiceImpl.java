@@ -2,6 +2,7 @@ package com.njt.service.user;
 
 import com.njt.dao.user.EmployeeDao;
 import com.njt.model.user.Employee;
+import com.njt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +15,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Autowired
     private EmployeeDao dao;
+    @Autowired
+    private UserService userService;
 
 
     @Override
@@ -34,7 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     public void updateEmployee(Employee dbEmployee, Employee employee) {
         dbEmployee.setName(employee.getName());
-        dbEmployee.setUser(employee.getUser());
+        dbEmployee.setUser(userService.findById(employee.getUser().getIdKorisnika()));
 
         dao.update(dbEmployee);
     }

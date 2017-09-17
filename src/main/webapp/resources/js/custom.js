@@ -1787,7 +1787,9 @@ if (typeof NProgress != 'undefined') {
 			if( typeof ($.fn.smartWizard) === 'undefined'){ return; }
 			console.log('init_SmartWizard');
 			
-			$('#wizard').smartWizard();
+			$('#wizard').smartWizard({
+                onFinish: validateAndSaveSubjectFunction
+			});
 
 			$('#wizard_verticle').smartWizard({
 			  transitionEffect: 'slide'
@@ -5056,7 +5058,7 @@ if (typeof NProgress != 'undefined') {
 		init_DataTables();
 		init_chart_doughnut();
 		init_gauge();
-		init_PNotify();
+		// init_PNotify();
 		init_starrr();
 		init_calendar();
 		init_compose();
