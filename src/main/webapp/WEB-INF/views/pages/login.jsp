@@ -2,28 +2,103 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Studentski servis</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" href="<c:url value='/resources/vendor/bootstrap/dist/css/bootstrap.min.css' />">
+    <link rel="stylesheet" href="<c:url value='/resources/vendor/font-awesome/css/font-awesome.min.css' />">
+    <link rel="stylesheet" href="<c:url value='/resources/vendor/nprogress/nprogress.css' />">
+    <link rel="stylesheet" href="<c:url value='/resources/vendor/animate.css/animate.min.css' />">
+    <link rel="stylesheet" href="<c:url value='/resources/css/custom.min.css' />">
 </head>
 
-<body>
+<body class="login">
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
 
-<%--<tiles:insertAttribute name="header"/>--%>
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form action="<c:url value='/login' />" method="post">
+                    <h1>Login Forma</h1>
+                    <c:if test="${param.error != null}">
+                        <p class="label label-danger login-error-custom">Neispravno korisničko ime ili šifra.</p>
+                    </c:if>
+                    <div>
+                        <input class="form-control" name="username" placeholder="username" required/>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" name="password" placeholder="password" required/>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <div>
+                        <button class="btn btn-default submit">Prijavi se</button>
+                        <a class="reset_pass" href="#">Zaboravili ste šifru?</a>
+                    </div>
 
-<form action="<c:url value='/login' />" method="post">
-    <c:if test="${param.error != null}">
-        <p class="label label-danger login-error-custom">Neispravno
-            korisničko ime ili šifra.</p>
-    </c:if>
-    <label><input name="username" required/></label>
-    <label><input type="password" name="password"/></label>
-    <label><input type="checkbox" id="rememberme" name="remember-me"> Remember Me</label>
-    <p class="forgot-pass">Zobaravili ste šifru?</p>
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-    <button class="submit">Prijavi me</button>
-</form>
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">Novi ste na sajtu?
+                            <a href="#signup" class="to_register"> Kreirajte Nalog </a>
+                        </p>
+
+                        <div class="clearfix"></div>
+                        <br/>
+
+                        <div>
+                            <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                            <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and
+                                Terms</p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div id="register" class="animate form registration_form">
+            <section class="login_content">
+                <form action="" method="post">
+                    <h1>Kreiraj Nalog</h1>
+                    <div>
+                        <input class="form-control" name="username" placeholder="username" required=""/>
+                    </div>
+                    <div>
+                        <input type="email" name="email" class="form-control" placeholder="email" required=""/>
+                    </div>
+                    <div>
+                        <input type="password" name="password" class="form-control" placeholder="password" required=""/>
+                    </div>
+                    <div>
+                        <button class="btn btn-default submit">Registuj se</button>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">Imate nalog?
+                            <a href="#signin" class="to_register"> Prijavi se </a>
+                        </p>
+
+                        <div class="clearfix"></div>
+                        <br/>
+
+                        <div>
+                            <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                            <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and
+                                Terms</p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
 </body>
 </html>

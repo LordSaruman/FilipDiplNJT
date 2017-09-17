@@ -24,7 +24,9 @@
         <put-attribute name="body" value="/WEB-INF/views/pages/home.jsp"/>
     </definition>
     <definition name="old-notifications-page" extends="base-definition">
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/old-notifications.style.jsp"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/old-notifications.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/old-notifications.script.jsp"/>
     </definition>
 
     <!--User-->
@@ -48,7 +50,9 @@
 
     <!--Subject-->
     <definition name="all-subjects-page" extends="base-definition">
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/subject/all-subject.style.jsp"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/subject/all-subject.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/subject/all-subject.script.jsp"/>
     </definition>
     <definition name="all-my-subjects-page" extends="base-definition">
         <put-attribute name="body" value="/WEB-INF/views/pages/subject/all-my-subjects.jsp"/>
@@ -75,7 +79,8 @@
         <put-attribute name="body" value="/WEB-INF/views/pages/school-year/previous-school-year.jsp"/>
     </definition>
     <definition name="school-year-settings-page" extends="base-definition">
-        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/school-year/school-year-settings.style.jsp"/>
+        <put-attribute name="custom-head-scripts-styles"
+                       value="/WEB-INF/views/pages/school-year/school-year-settings.style.jsp"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/school-year/school-year-settings.jsp"/>
         <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/school-year/school-year-settings.script.jsp"/>
     </definition>

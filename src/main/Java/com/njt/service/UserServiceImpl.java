@@ -25,7 +25,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findAllUsers() {
-        return dao.findAllUsers();
+
+        return dao.findAll();
     }
 
     @Override
@@ -36,7 +37,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void saveUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        dao.saveUser(user);
+        dao.persist(user);
     }
 
     @Override
