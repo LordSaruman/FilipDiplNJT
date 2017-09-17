@@ -1,5 +1,7 @@
 package com.njt.controller.SchoolYear;
 
+import com.njt.service.schoolYear.SchoolYearService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/backend")
 public class SchoolYearController {
 
+    @Autowired
+    private SchoolYearService schoolYearService;
 
     @RequestMapping(value = "/skolska-godina/trenutna")
     public String currentSchoolYear(ModelMap modelMap) {
@@ -23,5 +27,11 @@ public class SchoolYearController {
     @RequestMapping(value = "/skolska-godina/podesavanja")
     public String administrationAction(ModelMap modelMap) {
         return "school-year-settings-page";
+    }
+
+    @RequestMapping(value = "/skolska-godina/svi")
+    public String allSchoolYear(ModelMap modelMap) {
+        modelMap.addAttribute("allSchoolYear", schoolYearService.findAllSchoolYear());
+        return "all-school-year-page";
     }
 }
