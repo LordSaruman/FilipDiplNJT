@@ -5,7 +5,7 @@
 <script src="<c:url value='/resources/vendor/select2/dist/js/select2.min.js' />"></script>
 
 <script>
-    var subjectID = ${subject.id};
+    var subjectID = ${subject.idPredmeta};
     $(document).ready(function(){
         $('#type-of-study').select2({
             minimumResultsForSearch: -1

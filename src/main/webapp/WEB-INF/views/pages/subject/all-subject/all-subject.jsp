@@ -67,7 +67,7 @@
                                     <td>${subject.espb}</td>
                                     <td>${subject.numberOfStudents}</td>
                                     <td>${subject.numberOfLectures}</td>
-                                    <td><a href="<c:url value='/backend/predmet/izmeni/${subject.id}' />"><i class="fa fa-pencil-square-o"></i></a></td>
+                                    <td><a href="<c:url value='/backend/predmet/izmeni/${subject.idPredmeta}' />"><i class="fa fa-pencil-square-o"></i></a></td>
                                     <td><a href="" id="remove-fa"><i class="fa fa-remove"></i></a></td>
                                 </tr>
                             </c:forEach>

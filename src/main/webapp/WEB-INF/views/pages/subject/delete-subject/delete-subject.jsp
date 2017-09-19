@@ -124,7 +124,7 @@
                             <%--</div>--%>
                             <div class="actionBar">
                                 <a href="#" class="buttonFinish buttonDisabled subject-remove btn-default">Finish</a>
-                                data-subjectID = "${subject.id}">
+                                data-subjectID = "${subject.idPredmeta}">
                             </div>
                     </div>
                 </div>
