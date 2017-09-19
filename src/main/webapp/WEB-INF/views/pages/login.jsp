@@ -53,9 +53,8 @@
                         <br/>
 
                         <div>
-                            <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                            <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and
-                                Terms</p>
+                            <h1><i class="fa fa-paw"></i> Studentski servis</h1>
+                            <p>©2016 All Rights Reserved.Privacy and Terms</p>
                         </div>
                     </div>
                 </form>
@@ -90,9 +89,8 @@
                         <br/>
 
                         <div>
-                            <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                            <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and
-                                Terms</p>
+                            <h1><i class="fa fa-paw"></i> Studentski servis</h1>
+                            <p>©2017 All Rights Reserved. Privacy and Terms</p>
                         </div>
                     </div>
                 </form>

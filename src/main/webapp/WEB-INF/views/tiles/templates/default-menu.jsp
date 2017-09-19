@@ -37,7 +37,7 @@
                     <li><a><i class="fa fa-book"></i> Predmeti <span
                             class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="<c:url value='/backend/predmet/' />">Svi Predmeti</a></li>
+                            <li><a href="<c:url value='/backend/predmet/svi' />">Svi Predmeti</a></li>
                             <li><a href="<c:url value='/backend/predmet/moji-predmeti' />">Moji Predmeti</a></li>
                             <li><a href="<c:url value='/backend/predmet/dodaj' />">Dodaj Predmet</a></li>
                         </ul>

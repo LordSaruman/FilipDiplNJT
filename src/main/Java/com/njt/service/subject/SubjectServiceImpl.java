@@ -35,6 +35,10 @@ public class SubjectServiceImpl implements SubjectService{
         dbSubject.setNameOfTheSubject(subject.getNameOfTheSubject());
         dbSubject.setTypeOfStudies(subject.getTypeOfStudies());
         dbSubject.setYear(subject.getYear());
+        dbSubject.setCourse(subject.getCourse());
+        dbSubject.setEspb(subject.getEspb());
+        dbSubject.setNumberOfLectures(subject.getNumberOfLectures());
+        dbSubject.setNumberOfStudents(subject.getNumberOfStudents());
 
         dao.update(dbSubject);
     }

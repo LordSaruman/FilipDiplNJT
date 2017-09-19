@@ -5,14 +5,15 @@
 <script src="<c:url value='/resources/vendor/select2/dist/js/select2.min.js' />"></script>
 
 <script>
+    var subjectID = ${subject.id};
     $(document).ready(function(){
         $('#type-of-study').select2({
             minimumResultsForSearch: -1
         });
     });
 
+
     function validateAndSaveSubjectFunction(){
-//        TODO validacija
         if (!isSubjectValid()) {
             return;
         }
@@ -26,7 +27,7 @@
             numberOfLectures: $('#lecturer-number').val()
         };
 
-        sendAuthorizeAjax("/private/predmet/", subjectObj, 'POST', subjectSavedSuccessFunction, $(this));
+        sendAuthorizeAjax("/private/predmet/{subjectObj.id}", subjectObj, 'POST', subjectUpdateSuccessFunction(), $(this));
     };
 
     function isSubjectValid() {
@@ -65,10 +66,10 @@
             return false;
         }
 
-        var x = $('#espb').val();
-        var y = $('#students-number').val();
-        var z = $('#lecturer-number').val();
-        var w = $('#year-of-study').val();
+        var x = $('#espb');
+        var y = $('#students-number');
+        var z = $('#lecturer-number');
+        var w = $('#year-of-study');
         var regexNubmbers=/^[0-9]+$/;
 
         if(!x.match(regexNubmbers)){
@@ -91,8 +92,8 @@
             return false;
         }
 
-        var x1 = $('#subject-name').val();
-        var y1 = $('#course').val();
+        var x1 = $('#subject-name');
+        var y1 = $('#course');
         var regexLetters =/^[0-9]+$/;
 
         if (!x1.match(regexLetters)){
@@ -110,6 +111,15 @@
     }
 
     function subjectSavedSuccessFunction(ctx, data, statusCode) {
+        if (statusCode === 200) {
+            pNotifyShowNotification('Uspešno!', 'Uspešno sačuvan predmet.', 'success');
+        } else {
+            pNotifyShowNotification('Greška!', 'Greška prilikom čuvanja predmeta.', 'error');
+        }
+    }
+
+
+    function subjectUpdateSuccessFunction() {
         if (statusCode === 200) {
             pNotifyShowNotification('Uspešno!', 'Uspešno sačuvan predmet.', 'success');
         } else {
