@@ -9,6 +9,7 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idStudent")
     private int idStudenta;
 
     @Column(name = "ime", unique = true, nullable = false)

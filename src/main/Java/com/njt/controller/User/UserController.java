@@ -13,16 +13,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/obaveze")
-    public String allMyDuties(ModelMap modelMap) {
-        return "all-my-duties-page";
-    }
-
-    @RequestMapping(value = "/administracija")
-    public String administrationAction(ModelMap modelMap) {
-        return "administration-page";
-    }
-
     @RequestMapping(value = "/svi-zaposleni")
     public String allEmployeesAction(ModelMap modelMap) {
         return "all-employees-page";

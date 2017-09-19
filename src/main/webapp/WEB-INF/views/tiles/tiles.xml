@@ -31,10 +31,14 @@
 
     <!--User-->
     <definition name="all-my-duties-page" extends="base-definition">
-        <put-attribute name="body" value="/WEB-INF/views/pages/user/all-my-duties.jsp"/>
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/attend/all-my-duties/all-my-duties.style.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/attend/all-my-duties/all-my-duties.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/attend/all-my-duties/all-my-duties.script.jsp"/>
     </definition>
     <definition name="administration-page" extends="base-definition">
-        <put-attribute name="body" value="/WEB-INF/views/pages/user/administration.jsp"/>
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/attend/administration/administration.style.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/attend/administration/administration.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/attend/administration/administration.script.jsp"/>
     </definition>
 
     <!--Student-->

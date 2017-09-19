@@ -12,10 +12,10 @@ public class SchoolYear {
     private int idSkolskaGodina;
 
     @Column(name = "skolskaGodina", unique = true, nullable = false)
-    private Date schoolYear;
+    private int schoolYear;
 
     @Column(name = "aktivna", unique = true, nullable = false)
-    private Date activeSchoolYear;
+    private boolean activeSchoolYear;
 
     public int getIdSkolskaGodina() {
         return idSkolskaGodina;
@@ -26,20 +26,20 @@ public class SchoolYear {
         return this;
     }
 
-    public Date getSchoolYear() {
+    public int getSchoolYear() {
         return schoolYear;
     }
 
-    public SchoolYear setSchoolYear(Date schoolYear) {
+    public SchoolYear setSchoolYear(int schoolYear) {
         this.schoolYear = schoolYear;
         return this;
     }
 
-    public Date getActiveSchoolYear() {
+    public boolean getActiveSchoolYear() {
         return activeSchoolYear;
     }
 
-    public SchoolYear setActiveSchoolYear(Date activeSchoolYear) {
+    public SchoolYear setActiveSchoolYear(boolean activeSchoolYear) {
         this.activeSchoolYear = activeSchoolYear;
         return this;
     }
