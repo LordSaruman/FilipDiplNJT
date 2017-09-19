@@ -5,6 +5,7 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -27,6 +28,14 @@ public class SubjectController {
     @RequestMapping(value = "/predmet/dodaj")
     public String addNewSubject(ModelMap modelMap) {
         return "add-new-subject-page";
+    }
+
+
+    @RequestMapping(value = "/predmet/izmeni/{id}")
+    public String editNewSubject(@PathVariable int id, ModelMap modelMap) {
+        modelMap.addAttribute("subject", subjectService.findById(id));
+
+        return "edit-new-subject-page";
     }
 
     @RequestMapping(value = "/predmet/svi")

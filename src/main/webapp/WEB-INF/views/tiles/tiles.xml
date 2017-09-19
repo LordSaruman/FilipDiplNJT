@@ -58,6 +58,14 @@
         <put-attribute name="body" value="/WEB-INF/views/pages/subject/all-subject/all-subject.jsp"/>
         <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/subject/all-subject/all-subject.script.jsp"/>
     </definition>
+    <definition name="edit-new-subject-page" extends="base-definition">
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/subject/change-subject/change-subject.style.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/subject/change-subject/change-subject.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/subject/change-subject/change-subject.script.jsp"/>
+    </definition>
+    <definition name="all-subjects-found" extends="base-definition">
+        <put-attribute name="body" value="/WEB-INF/views/pages/subject/all-subject/all-subject.jsp"/>
+    </definition>
     <definition name="all-my-subjects-page" extends="base-definition">
         <put-attribute name="body" value="/WEB-INF/views/pages/subject/all-my-subjects.jsp"/>
     </definition>
@@ -65,6 +73,16 @@
         <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/subject/add-new-subject/add-new-subject.style.jsp"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/subject/add-new-subject/add-new-subject.jsp"/>
         <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/subject/add-new-subject/add-new-subject.scripts.jsp"/>
+    </definition>
+    <definition name="delete-subject-page" extends="base-definition">
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/subject/delete-subject/delete-subject.style.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/subject/delete-subject/delete-subject.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/subject/delete-subject/delete-subject.script.jsp"/>
+    </definition>
+    <definition name="change-subject-page" extends="base-definition">
+        <put-attribute name="custom-head-scripts-styles" value="/WEB-INF/views/pages/subject/change-subject/change-subject.style.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/subject/change-subject/change-subject.jsp"/>
+        <put-attribute name="custom-scripts" value="/WEB-INF/views/pages/subject/change-subject/change-subject.script.jsp"/>
     </definition>
     <!--Graduate work-->
     <definition name="all-graduate-work-page" extends="base-definition">
