@@ -2,15 +2,23 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
+<style>
+    .title-servis {
+        position: relative;
+        top: -31px;
+        left: 16px;
+    }
+</style>
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="<c:url value='/backend/pocetna' />" class="site_title"><%--<i class="fa fa-paw"></i>--%><img src="<c:url value='/resources/img/fon1.png' />" alt="..." class="-image" style="width:50%; height:100%"> <span>Studentski servis</span></a>
+            <a href="<c:url value='/backend/pocetna' />" class="site_title"><%--<i class="fa fa-paw"></i>--%><img src="<c:url value='/resources/img/fon1.png' />" alt="..." class="-image" style="width:50%; height:100%"> </a>
+            <a class="site_title title-servis"><span>Studentski servis</span></a>
         </div>
         <div class="clearfix"></div>
         <div class="profile clearfix">
             <div class="profile_pic">
-                <img src="<c:url value='/resources/img/DSC_2260.JPG' />" alt="..." class="img-circle profile_img">
+                <img src="<c:url value='/resources/img/DSC_2260.JPG' />" alt="..." class="img-circle profile_img" style="height: 56px;">
             </div>
             <div class="profile_info">
                 <span>Welcome,</span>

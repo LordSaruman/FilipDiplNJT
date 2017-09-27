@@ -2,6 +2,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <script>
+    var currentDeletingSubjectId;
+
     $('.btn-primary').on('click', function () {
 
         /*prosledjivanje objekta*/
@@ -15,8 +17,8 @@
             numberOfLectures: $('#lecturer-number').val()
         };
 
-        sendAuthorizeAjax("/private/predmet/", subjectObj, 'DELETE', subjectDeletedSuccessFunction, $(this));
-    })
+        sendAuthorizeAjax("/private/predmet/" + currentDeletingSubjectId, subjectObj, 'DELETE', subjectDeletedSuccessFunction, $(this));
+    });
 
     function subjectDeletedSuccessFunction(ctx, data, statusCode) {
         if (statusCode === 200) {

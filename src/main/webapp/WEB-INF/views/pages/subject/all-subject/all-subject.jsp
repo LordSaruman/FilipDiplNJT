@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="modal.jsp"%>
+<%@ include file="modal-script.jsp"%>
 
 <div class="right_col" role="main">
     <div class="">
@@ -69,7 +70,7 @@
                                     <td>${subject.numberOfStudents}</td>
                                     <td>${subject.numberOfLectures}</td>
                                     <td><a href="<c:url value='/backend/predmet/izmeni/${subject.idPredmeta}' />"><i class="fa fa-pencil-square-o"></i></a></td>
-                                    <td><a href="bs-example-modal-sm" data-toggle="modal" data-target=".bs-example-modal-sm" id="remove-fa" ><i class="fa fa-remove" ></i></a></td>
+                                    <td><a href="#" data-subject-id="${subject.idPredmeta}" class="remove-subject"><i class="fa fa-remove" ></i></a></td>
                                 </tr>
                             </c:forEach>
 
