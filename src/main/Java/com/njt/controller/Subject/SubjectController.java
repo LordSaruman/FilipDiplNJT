@@ -38,6 +38,12 @@ public class SubjectController {
         return "edit-new-subject-page";
     }
 
+    @RequestMapping(value = "/predmet/izbrisi/")
+    public String deleteSubject(ModelMap modelMap) {
+
+        return "all-my-subjects-page";
+    }
+
     @RequestMapping(value = "/predmet/svi")
     public String allSubjectsFound(ModelMap modelMap){
         modelMap.addAttribute("allSubjects", subjectService.findAllSubjects());

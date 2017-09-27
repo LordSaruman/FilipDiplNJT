@@ -5,7 +5,7 @@
 <script src="<c:url value='/resources/vendor/select2/dist/js/select2.min.js' />"></script>
 
 <script>
-    var subjectID = ${subject.idPredmeta};
+
     $(document).ready(function(){
         $('#type-of-study').select2({
             minimumResultsForSearch: -1
@@ -27,7 +27,7 @@
             numberOfLectures: $('#lecturer-number').val()
         };
 
-        sendAuthorizeAjax("/private/predmet/{subjectObj.id}", subjectObj, 'POST', subjectUpdateSuccessFunction(), $(this));
+        sendAuthorizeAjax("/private/predmet/", subjectObj, 'PUT', subjectUpdateSuccessFunction(), $(this));
     };
 
     function isSubjectValid() {
@@ -109,15 +109,6 @@
 
         return true;
     }
-
-    function subjectSavedSuccessFunction(ctx, data, statusCode) {
-        if (statusCode === 200) {
-            pNotifyShowNotification('Uspešno!', 'Uspešno sačuvan predmet.', 'success');
-        } else {
-            pNotifyShowNotification('Greška!', 'Greška prilikom čuvanja predmeta.', 'error');
-        }
-    }
-
 
     function subjectUpdateSuccessFunction() {
         if (statusCode === 200) {

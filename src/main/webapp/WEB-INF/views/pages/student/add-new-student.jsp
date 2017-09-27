@@ -5,7 +5,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Dodavanje Korisnika</h3>
+                <h3>Dodavanje Studenta</h3>
             </div>
 
             <div class="title_right">
@@ -23,12 +23,10 @@
         <div class="clearfix"></div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Dodavanje Korisnika
-                            <small>sva polja su obavezna</small>
-                        </h2>
+                        <h2>Dodavanje novog studenta<small></small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -36,80 +34,125 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                    aria-expanded="false"><i class="fa fa-wrench"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Settings 1</a>
-                                    </li>
-                                    <li><a href="#">Settings 2</a>
-                                    </li>
+                                    <li><a href="#">Settings 1</a></li>
+                                    <li><a href="#">Settings 2</a></li>
                                 </ul>
+                            </li>
+                            <li><a class="close-link-disabled"><i class="fa fa-close"></i></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-
                     <div class="x_content">
-                        <section id="web-application">
-                            <h2 class="page-header">Web Application Icons</h2>
-                            <div class="row fontawesome-icon-list">
+
+
+                        <!-- Smart Wizard -->
+                        <p>Popunite podatke o studentu:</p>
+                        <div id="wizard" class="form_wizard wizard_horizontal">
+                            <ul class="wizard_steps">
+                                <li>
+                                    <a href="#step-1">
+                                        <span class="step_no">1</span>
+                                        <span class="step_descr">Korak 1<br/><small>Osnovne Informacije</small></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step-2">
+                                        <span class="step_no">2</span>
+                                        <span class="step_descr">Korak 2<br/><small>Dodatne informacija</small></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step-3">
+                                        <span class="step_no">3</span>
+                                        <span class="step_descr">Korak 3<br/><small>Kraj</small></span>
+                                    </a>
+                                </li>
+                                <%--<li>--%>
+                                <%--<a href="#step-4">--%>
+                                <%--<span class="step_no">3</span>--%>
+                                <%--<span class="step_descr">Korak 3<br/><small>Kraj</small></span>--%>
+                                <%--</a>--%>
+                                <%--</li>--%>
+                            </ul>
+                            <div id="step-1">
+                                <form class="form-horizontal form-label-left">
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="subject-name">Ime studenta <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="subject-name" name="subject-name" required="required"
+                                                   class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="subject-name">Prezime studenta <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="subject-surname" name="subject-surname" required="required"
+                                                   class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="type-of-study">Smer <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select name="type-of-study" id="type-of-study" style="width: 100%">
+                                                <option value="osnovne">ISiT</option>
+                                                <option value="master">Men</option>
+                                                <option value="doktorske">Kv</option>
+
+                                            </select>
+                                            <%--<input type="text" id="last-name" name="last-name"--%>
+                                            <%--required="required" class="form-control col-md-7 col-xs-12">--%>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="year-of-study"
+                                               class="control-label col-md-3 col-sm-3 col-xs-12">Godina upisa<span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="year-of-study" class="form-control col-md-7 col-xs-12"
+                                                   type="text" name="year-of-study">
+                                        </div>
+                                    </div>
+                                </form>
 
                             </div>
-                        </section>
+                            <div id="step-2">
+                                <form class="form-horizontal form-label-left">
 
-                        <section id="spinner">
-                            <h2 class="page-header">Spinner Icons</h2>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="course">Broj indeksa <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input id="course" name="course" required="required"
+                                                   class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                    </div>
 
-                            <div class="alert alert-success">
-                                <ul class="fa-ul">
-                                    <li>
-                                        <i class="fa fa-info-circle fa-lg fa-li"></i> These icons work great
-                                        with the <code>fa-spin</code> class. Check out the
-                                        <a href="../examples/#spinning" class="alert-link">spinning icons
-                                            example</a>.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="row fontawesome-icon-list">
+                                </form>
 
                             </div>
-                        </section>
-
-                        <section id="form-control">
-                            <h2 class="page-header">Form Control Icons</h2>
-
-                            <div class="row fontawesome-icon-list">
-
+                            <div id="step-3">
+                                <h2 class="StepTitle">Validacija i provera</h2>
+                                <p>
+                                    Da li ste proverili podatke koje ste uneli i da li ste sva polja popunili?
+                                    Ako jeste, nastavite dalje.
+                                </p>
                             </div>
-                        </section>
+                        </div>
 
-                        <section id="brand">
-                            <h2 class="page-header">Brand Icons</h2>
-
-                            <div class="alert alert-success">
-                                <ul class="margin-bottom-none padding-left-lg">
-                                    <li>All brand icons are trademarks of their respective owners.</li>
-                                    <li>The use of these trademarks does not indicate endorsement of the
-                                        trademark holder by Font Awesome, nor vice versa.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="alert alert-warning">
-                                <h4><i class="fa fa-warning"></i> Warning!</h4> Apparently, Adblock Plus can
-                                remove Font Awesome brand icons with their "Remove Social Media Buttons"
-                                setting. We will not use hacks to force them to display. Please
-                                <a href="https://adblockplus.org/en/bugs" class="alert-link">report an issue
-                                    with Adblock Plus</a> if you believe this to be an error. To work around
-                                this, you'll need to modify the social icon class names.
-
-                            </div>
-
-                            <div class="row fontawesome-icon-list">
-
-                            </div>
-                        </section>
                     </div>
+                    <!-- End SmartWizard Content -->
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </div>

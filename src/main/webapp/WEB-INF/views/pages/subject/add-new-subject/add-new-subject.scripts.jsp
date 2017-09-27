@@ -31,7 +31,7 @@
 
     function isSubjectValid() {
         if (!$('#subject-name').val()) {
-            pNotifyShowNotification('Greška!', 'Polje naziv predmeta je obavezno.', 'error');
+            pNotifyShowNotification('Greška!', 'Polje je naziv predmeta obavezno', 'error');
             return false;
         }
 
@@ -95,12 +95,12 @@
         var y1 = $('#course').val();
         var regexLetters =/^[0-9]+$/;
 
-        if (!x1.match(regexLetters)){
+        if (x1.match(regexLetters)){
             pNotifyShowNotification('Greška!', 'Polje naziv predmeta prima samo slova.', 'error');
             return false;
         }
 
-        if (!y1.match(regexLetters)){
+        if (y1.match(regexLetters)){
             pNotifyShowNotification('Greška!', 'Polje smer prima samo slova.', 'error');
             return false;
         }

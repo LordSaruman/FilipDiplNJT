@@ -53,8 +53,9 @@
                         <br/>
 
                         <div>
-                            <h1><i class="fa fa-paw"></i> Studentski servis</h1>
-                            <p>©2016 All Rights Reserved.Privacy and Terms</p>
+                            <h1><img src="<c:url value='/resources/img/fon1.png' />" alt="..." class="-image" style="width:100%; height:100%"></h1>
+                            <h1>Studentski servis</h1>
+                            <p>©2017 All Rights Reserved. Privacy and Terms</p>
                         </div>
                     </div>
                 </form>
@@ -89,7 +90,8 @@
                         <br/>
 
                         <div>
-                            <h1><i class="fa fa-paw"></i> Studentski servis</h1>
+                            <h1><img src="<c:url value='/resources/img/fon1.png' />" alt="..." class="-image" style="width:100%; height:100%"></h1>
+                            <h1>Studentski servis</h1>
                             <p>©2017 All Rights Reserved. Privacy and Terms</p>
                         </div>
                     </div>

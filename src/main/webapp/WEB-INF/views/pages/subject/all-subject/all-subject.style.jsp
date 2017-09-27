@@ -3,3 +3,4 @@
 
 <link rel="stylesheet" href="<c:url value='/resources/vendor/iCheck/skins/flat/green.css' />">
 <link rel="stylesheet" href="<c:url value='/resources/vendor/datatables.net-bs/css/dataTables.bootstrap.min.css' />">
+<link rel="stylesheet" href="<c:url value='/resources/vendor/select2/dist/css/select2.min.css' />">

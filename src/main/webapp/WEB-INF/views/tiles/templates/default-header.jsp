@@ -14,7 +14,7 @@
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                        aria-expanded="false">
-                        <img src="<c:url value='/resources/img/default-user.png' />" alt="">John Doe
+                        <img src="<c:url value='/resources/img/DSC_2260.JPG' />" alt="">Filip Ivanovic
                         <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">

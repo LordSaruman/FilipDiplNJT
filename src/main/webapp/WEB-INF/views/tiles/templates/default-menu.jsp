@@ -5,16 +5,16 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="<c:url value='/backend/pocetna' />" class="site_title"><i class="fa fa-paw"></i> <span>Studentski servis</span></a>
+            <a href="<c:url value='/backend/pocetna' />" class="site_title"><%--<i class="fa fa-paw"></i>--%><img src="<c:url value='/resources/img/fon1.png' />" alt="..." class="-image" style="width:50%; height:100%"> <span>Studentski servis</span></a>
         </div>
         <div class="clearfix"></div>
         <div class="profile clearfix">
             <div class="profile_pic">
-                <img src="<c:url value='/resources/img/default-user.png' />" alt="..." class="img-circle profile_img">
+                <img src="<c:url value='/resources/img/DSC_2260.JPG' />" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2>Filip Ivanovic</h2>
             </div>
         </div>
         <br/>
@@ -26,8 +26,8 @@
                 <ul class="nav side-menu">
                     <li><a href="<c:url value='/backend/pocetna' />"><i class="fa fa-home"></i> Home</a></li>
                     <li><a href="<c:url value='/backend/obavestenja/stara-obavestenja' />"><i class="fa fa-file-excel-o"></i> Stara Obavestenja</a></li>
-                    <li><a><i class="fa fa-wheelchair"></i> Studenti <span class="fa fa-chevron-down"></span></a>
-                    <%--<li><a><i class="fa fa-mortar-board"></i> Studenti <span class="fa fa-chevron-down"></span></a>--%>
+                    <%--<li><a><i class="fa fa-wheelchair"></i> Studenti <span class="fa fa-chevron-down"></span></a>--%>
+                    <li><a><i class="fa fa-mortar-board"></i> Studenti <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<c:url value='/backend/studenti/' />">Svi Studenti</a></li>
                             <li><a href="<c:url value='/backend/studenti/aktivni' />">Moji Studenti</a></li>

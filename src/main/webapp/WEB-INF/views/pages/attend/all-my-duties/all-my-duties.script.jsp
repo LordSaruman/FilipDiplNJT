@@ -33,7 +33,7 @@
     function saveDutySuccessFunction(ctx, data, statusCode) {
         $(ctx).prop('disabled', false);
         if (statusCode === 200) {
-            new pNotifyShowNotification('Uspesno', 'Uspesno dodata obaveza!', 'success');
+            new pNotifyShowNotification('Uspesno', 'Uspesno sacuvane obaveze!', 'success');
             attendsToAdd.push(currentAttend);
             currentAttend = null;
             var row = $('<tr>')
